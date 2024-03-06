@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script> -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+  
+    
+</head>
+
+<body>
+    <div id='root'></div>
+    <script>
+        //ex1
+        // const h1DOM = document.createElement('h1');
+        // h1DOM.title = 'heelo'
+        // h1DOM.className = 'heading'
+        // h1DOM.innerText = 'hello guys'
+        // document.body.appendChild(h1DOM)
+
+        // // react
+        // const h1React = React.createElement('h1', { title: 'hello', className: 'heading' }, 'Hello guys')
+        // const root = document.getElementById('root')
+        // ReactDOM.render(h1React, root)
+        // console.log(h1React)
+
+        // ex2:
+        // const ulDOM = document.createElement('ul')
+        // ulDOM.id = 'ul-li'
+        // ulDOM.style = 'color: red;font-size: 30px'
+        // const li1DOM = document.createElement('li')
+        // li1DOM.innerText= 'JS'
+        // const li2DOM = document.createElement('li')
+        // li2DOM.innerText = 'ReactJS'
+        
+        // ulDOM.appendChild(li1DOM)
+        // ulDOM.appendChild(li2DOM)
+        // document.body.appendChild(ulDOM)
+        
+
+        const postItem = React.createElement(
+            'div',
+            {className: 'post-item'},
+            React.createElement(
+                'h2',
+                {title : 'Hocj React'},
+                'hoc ReactJs'
+            ),
+            React.createElement('p', {}, "hoc React tu wed"),
+        )
+        const root = document.getElementById( 'root')
+        const rootContainer = ReactDOM.createRoot(root);
+        rootContainer.render(postItem)
+
+
+
+
+
+    </script>
+</body>
+
+</html>
+<!-- 
+1. github, npmjs, unpkg
+2.add react to wedsite
+3. official docs -->
+
+<!-- b2: mục đích so sánh react vs html thuần để thấy cách sử dụng hiểu sâu về nó
+1. react.creatElement() => react getElement
+2. so sanhs document.creatElement() => DOM getElement
+3. thay ddooir: id, classNAme, style...
+4. theem text, html
+5. tao: 
+    <h1 title="Hello" class="heading">heelo guys</h1>
+6. tao: 
+    <ul>
+        <li>Js</li>
+        <li>Reactjs</li>
+    </ul>
+7. Tao 
+    <div class="post-item">
+        <h2 title="Hocj react tai">reactjs</h2>
+        <p>Hoc reactjs tu co ban den nang cao</p>    
+    </div> -->
